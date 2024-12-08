@@ -325,75 +325,40 @@
                         Haz tu reserva aquí
                     </h3>
                 </div>
-                <form
-                    class="tw-mt-4 tw-flex tw-max-w-[350px] tw-flex-col tw-gap-3"
-                >
+                <form class="tw-mt-4 tw-flex tw-max-w-[350px] tw-flex-col tw-gap-3">
                     <div class="tw-flex tw-flex-col tw-gap-4">
                         <div class="tw-flex tw-flex-col tw-gap-1">
                             <div class="tw-text-gray-500">Nombre</div>
-                            <input
-                                type="text"
-                                class="input"
-                                maxlength="10"
-                                required
-                                placeholder="name"
-                            />
+                            <input type="text" class="input" maxlength="10" required placeholder="name" name="name" />
                         </div>
                         <div class="tw-flex tw-flex-col tw-gap-1">
                             <div class="tw-text-gray-500">Teléfono</div>
-                            <input
-                                type="text"
-                                class="input"
-                                required
-                                placeholder="phone"
-                            />
+                            <input type="text" class="input" required placeholder="phone" name="phone" />
                         </div>
                         <div class="tw-flex tw-flex-col tw-gap-1">
                             <div class="tw-text-gray-500">Email</div>
-                            <input
-                                type="email"
-                                class="input"
-                                required
-                                placeholder="email"
-                                id="email"
-                            />
+                            <input type="email" class="input" required placeholder="email" name="email" />
                         </div>
                     </div>
-
+                
                     <div class="tw-flex tw-gap-4">
                         <div class="tw-flex tw-w-full tw-flex-col tw-gap-1">
                             <div class="tw-text-gray-500">Hora</div>
-                            <select
-                                name="timings"
-                                id="timings"
-                                class="input"
-                            ></select>
+                            <select name="timings" id="timings" class="input"></select>
                         </div>
                         <div class="tw-flex tw-flex-col tw-gap-1">
                             <div class="tw-text-gray-500">Fecha</div>
-                            <input
-                                type="date"
-                                class="input"
-                                required
-                                placeholder="date"
-                                id="date"
-                            />
+                            <input type="date" class="input" required placeholder="date" id="date" name="date" />
                         </div>
                     </div>
-
+                
                     <div class="tw-flex tw-w-full tw-gap-4 max-md:tw-flex-col">
                         <div class="tw-flex tw-w-full tw-flex-col tw-gap-1">
                             <div class="tw-text-gray-500">Nº Personas</div>
-                            <input
-                                type="number"
-                                value="2"
-                                min="0"
-                                max="15"
-                                class="input"
-                            />
+                            <input type="number" value="2" min="0" max="15" class="input" name="people" />
                         </div>
                     </div>
-
+                
                     <button
                         type="submit"
                         class="btn tw-ml-auto tw-mt-5 tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2"
@@ -402,6 +367,8 @@
                         <i class="bi bi-arrow-right"></i>
                     </button>
                 </form>
+                
+
                 <div
                     class="tw-mt-4 tw-flex tw-flex-col tw-gap-2 tw-text-center"
                 >
@@ -417,81 +384,6 @@
         <section
             class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[5%]"
         >
-            <!-- <h3
-                class="primary-text-color tw-text-3xl tw-font-medium max-md:tw-text-2xl"
-            >
-                What some of our diners say
-            </h3>
-
-            <div
-                class="tw-mt-[5%] tw-flex tw-w-full tw-place-content-center tw-gap-[5%]"
-            >
-                <div class="review-container tw-flex tw-flex-col">
-                    <div class="tw-flex !tw-h-[150px] tw-max-w-[550px]">
-                        <div
-                            class="slides fade tw-text-justify tw-text-lg max-md:tw-text-base"
-                        >
-                            <q class="tw-italic tw-text-gray-600">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Quaerat veritatis assumenda
-                                dolor delectus laborum odio consequatur
-                                accusantium quam? Ad, odit.
-                            </q>
-                            <div class="tw-mt-2 tw-text-yellow-400">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="tw-mt-3">- Trich B</p>
-                        </div>
-
-                        <div
-                            class="slides fade tw-text-justify tw-text-lg max-md:tw-text-base"
-                        >
-                            <q class="tw-italic tw-text-gray-600">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Totam, sint.
-                            </q>
-                            <div class="tw-mt-2 tw-text-yellow-400">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="tw-mt-3">- Bára Müllerová</p>
-                        </div>
-
-                        <div
-                            class="slides fade tw-text-justify tw-text-lg max-md:tw-text-base"
-                        >
-                            <q class="tw-italic tw-text-gray-600">
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Dolore sapiente possimus
-                                quibusdam nesciunt, architecto distinctio.
-                            </q>
-                            <div class="tw-mt-2 tw-text-yellow-400">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="tw-mt-3">- Matt freeman</p>
-                        </div>
-                    </div>
-
-                   
-                    <div class="dots-container tw-mt-auto">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                </div>
-            </div> -->
-
             <div
                 class="tw-mt-[5%] tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-5"
             >
@@ -603,6 +495,11 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
     ></script>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("your_user_id"); // Reemplaza "your_user_id" con tu ID de usuario de EmailJS
+    </script>
 
     <script src="./scripts/utils.js"></script>
     <script src="./index.js"></script>
