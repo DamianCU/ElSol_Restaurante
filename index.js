@@ -207,15 +207,15 @@ form.addEventListener("submit", async (event) => {
 
     // Usa EmailJS para enviar el correo
     try {
-        const serviceID = "your_service_id"; // Sustituye por tu serviceID
-        const templateID = "your_template_id"; // Sustituye por tu templateID
-        const userID = "your_user_id"; // Sustituye por tu userID
+        const serviceID = "service_9jf5cij"; 
+        const templateID = "template_z70q5ni"; 
+        const userID = "st5OOiEQfVODncHop"; 
 
         await emailjs.send(serviceID, templateID, data, userID);
         alert("Reserva enviada con éxito. ¡Te contactaremos pronto!");
-        form.reset(); // Limpia el formulario después de enviar
+        form.reset(); 
     } catch (error) {
         console.error("Error al enviar la reserva:", error);
-        alert("Hubo un error al enviar tu reserva. Intenta de nuevo.");
+        alert("Hubo un error al enviar tu reserva. Intentalo de nuevo.");
     }
 });
