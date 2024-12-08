@@ -188,11 +188,11 @@ stars.forEach((star, i) => {
     
 starContainer.addEventListener('mouseleave', hideActiveStar)
 
-// Selecciona el formulario y configura el evento de envío
-const form = document.querySelector("form");
+// Selecciona el formulario
+const form = document.getElementById("reservation-form");
 
 form.addEventListener("submit", async (event) => {
-    event.preventDefault(); // Evita que el formulario recargue la página
+    event.preventDefault(); // Evita que la página se recargue
 
     // Captura los datos del formulario
     const formData = new FormData(form);
@@ -205,17 +205,17 @@ form.addEventListener("submit", async (event) => {
         people: formData.get("people"),
     };
 
-    // Usa EmailJS para enviar los datos
+    // Usa EmailJS para enviar el correo
     try {
-        // Reemplaza con tus credenciales de EmailJS
-        const serviceID = "your_service_id";
-        const templateID = "your_template_id";
-        const userID = "your_user_id";
+        const serviceID = "your_service_id"; // Sustituye por tu serviceID
+        const templateID = "your_template_id"; // Sustituye por tu templateID
+        const userID = "your_user_id"; // Sustituye por tu userID
 
         await emailjs.send(serviceID, templateID, data, userID);
         alert("Reserva enviada con éxito. ¡Te contactaremos pronto!");
+        form.reset(); // Limpia el formulario después de enviar
     } catch (error) {
-        console.error("Error al enviar el formulario:", error);
-        alert("Hubo un error al enviar la reserva. Por favor, inténtalo de nuevo.");
+        console.error("Error al enviar la reserva:", error);
+        alert("Hubo un error al enviar tu reserva. Intenta de nuevo.");
     }
 });
