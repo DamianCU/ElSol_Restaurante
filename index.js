@@ -187,3 +187,35 @@ stars.forEach((star, i) => {
 })
     
 starContainer.addEventListener('mouseleave', hideActiveStar)
+
+// Selecciona el formulario
+const form = document.getElementById("reservation-form");
+
+form.addEventListener("submit", async (event) => {
+    event.preventDefault(); // Evita que la página se recargue
+
+    // Captura los datos del formulario
+    const formData = new FormData(form);
+    const data = {
+        name: formData.get("name"),
+        phone: formData.get("phone"),
+        email: formData.get("email"),
+        date: formData.get("date"),
+        timings: formData.get("timings"),
+        people: formData.get("people"),
+    };
+
+    // Usa EmailJS para enviar el correo
+    try {
+        const serviceID = "service_9jf5cij"; 
+        const templateID = "template_z70q5ni"; 
+        const userID = "st5OOiEQfVODncHop"; 
+
+        await emailjs.send(serviceID, templateID, data, userID);
+        alert("Reserva enviada con éxito. ¡Te contactaremos pronto!");
+        form.reset(); 
+    } catch (error) {
+        console.error("Error al enviar la reserva:", error);
+        alert("Hubo un error al enviar tu reserva. Intentalo de nuevo.");
+    }
+});
