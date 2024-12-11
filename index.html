@@ -10,9 +10,6 @@
             content="Enjoy Classic English Breakfast & More | Casual outpost offering traditional morning fare alongside wraps, pizza & sandwiches."
         />
 
-<!--         <meta name="twitter:title" content="Bistro restaurant" />
-        <meta name="twitter:description" content=" Bistro" /> -->
-
         <!-- Open Graph / Facebook -->
         <meta property="og:title" content="Title of the project" />
         <meta property="og:description" content="" />
@@ -48,6 +45,7 @@
     </head>
 
     <body
+        id="body-start"
         class="tw-flex tw-min-h-[100vh] tw-w-full tw-flex-col tw-bg-[#ffffff]"
     >
         <header
@@ -56,9 +54,7 @@
             <div
                 class="tw-absolute tw-left-0 tw-top-0 tw-z-[-1] tw-h-0 tw-w-full tw-bg-white tw-shadow-lg"
                 id="expanding-header-bg"
-            >
-                <!-- expands the white background as scroll -->
-            </div>
+            ></div>
 
             <div class="tw-h-[145px] tw-w-[150px] tw-p-[4px]">
                 <img
@@ -75,11 +71,11 @@
                     class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-white max-md:tw-mt-[30px] max-md:tw-flex-col max-md:tw-place-items-end max-md:tw-gap-5 md:tw-mx-auto md:tw-place-items-center"
                 >
 
-                    <a class="header-links" href=""> Inicio </a>
-                    <a class="header-links" href=""> El Restaurante</a>
-                    <a class="header-links" href=""> Carta </a>
-                    <a class="header-links" href=""> Galería </a>
-                    <a class="header-links" href=""> Contacto </a>
+                    <a class="header-links" href="#body-start"> Inicio </a>
+                    <a class="header-links" href="#theRestaurant"> El Restaurante</a>
+                    <a class="header-links" href="#theLetter"> Carta </a>
+                    <!-- <a class="header-links" href="#gallery"> Galería </a> -->
+                    <a class="header-links" href="#contact"> Contacto </a>
 
                     <a
                         class="header-links"
@@ -90,6 +86,7 @@
                         Haz tu reserva online
                     </a>
                 </div>
+
                 <div
                     class="tw-flex tw-place-items-center tw-gap-[20px] tw-text-xl max-md:tw-w-full max-md:tw-place-content-center max-md:!tw-text-white"
                 >
@@ -119,9 +116,7 @@
                 onclick="toggleHeader()"
                 aria-label="menu"
                 id="collapse-btn"
-            >
-                <!-- <i class="bi bi-list"></i> -->
-            </button>
+            ></button>
         </header>
 
         <section
@@ -139,12 +134,6 @@
             <div
                 class="tw-absolute tw-left-[50%] tw-top-[50%] tw-flex tw-w-full tw-translate-x-[-50%] tw-translate-y-[-50%] tw-flex-col tw-place-content-center tw-place-items-center tw-gap-4 tw-p-2 tw-text-white"
             >
-                <!-- <img
-                    src="./assets/logo/kitchen.svg"
-                    alt="kitchen"
-                    class="tw-h-[150px] tw-w-[150px] max-md:tw-h-[100px] max-md:tw-w-[100px]"
-                /> -->
-
                 <h1
                     class="khula-font tw-text-7xl tw-font-semibold max-md:tw-text-center max-md:tw-text-5xl"
                 >
@@ -159,14 +148,6 @@
                     class="tw-mt-3 tw-flex tw-w-full tw-place-content-center tw-gap-[2%] max-md:tw-gap-[4%]"
                 >
                     <a
-                        href="https://5"
-                        target="_blank"
-                        rel="noreferrer"
-                        class="tw-flex tw-rounded-full tw-bg-white tw-p-3 tw-px-[20px] tw-text-black tw-transition-colors tw-duration-[0.3s] hover:tw-bg-primary hover:tw-text-white"
-                    >
-                        Haz tu reserva online
-                    </a>
-                    <a
                         href="https://maps.app.goo.gl/4U62kNoDfx11FfsG6"
                         target="_blank"
                         rel="noreferrer"
@@ -180,6 +161,7 @@
         </section>
 
         <section
+            id="theRestaurant"
             class="tw-flex tw-min-h-[60vh] tw-w-full tw-place-content-center tw-place-items-center tw-gap-[10%] tw-bg-[#fff] tw-p-4 tw-px-[20%] max-md:tw-flex-col max-md:tw-gap-[4%] max-md:tw-px-[5%]"
         >
             <div
@@ -199,7 +181,7 @@
                 >
                     Restaurante EL SOL
                 </h2>
-                <!-- <h3 class="tw-text-5xl max-md:tw-text-3xl">Bienvenidos</h3> -->
+                
                 <div class="tw-mt-6 tw-max-w-[350px] tw-text-justify">
                    <p> En el corazón de Cehegín, donde el tiempo parece detenerse con el encanto de sus callejuelas, se encuentra El Sol, un refugio para los amantes de la buena mesa. Aquí, la tradición culinaria se funde con la innovación, como si cada plato narrara una historia que honra el pasado mientras dibuja los sabores del futuro.</p>
                    <p>
@@ -220,6 +202,7 @@
         </section>
 
         <section
+            id="theLetter"
             class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-bg-[#fff] tw-p-[5%] max-md:tw-px-[5%]"
         >
             <h2 class="tw-text-xl tw-italic">
@@ -425,80 +408,6 @@
         <section
             class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[5%]"
         >
-            <!-- <h3
-                class="primary-text-color tw-text-3xl tw-font-medium max-md:tw-text-2xl"
-            >
-                What some of our diners say
-            </h3>
-
-            <div
-                class="tw-mt-[5%] tw-flex tw-w-full tw-place-content-center tw-gap-[5%]"
-            >
-                <div class="review-container tw-flex tw-flex-col">
-                    <div class="tw-flex !tw-h-[150px] tw-max-w-[550px]">
-                        <div
-                            class="slides fade tw-text-justify tw-text-lg max-md:tw-text-base"
-                        >
-                            <q class="tw-italic tw-text-gray-600">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Quaerat veritatis assumenda
-                                dolor delectus laborum odio consequatur
-                                accusantium quam? Ad, odit.
-                            </q>
-                            <div class="tw-mt-2 tw-text-yellow-400">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="tw-mt-3">- Trich B</p>
-                        </div>
-
-                        <div
-                            class="slides fade tw-text-justify tw-text-lg max-md:tw-text-base"
-                        >
-                            <q class="tw-italic tw-text-gray-600">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Totam, sint.
-                            </q>
-                            <div class="tw-mt-2 tw-text-yellow-400">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="tw-mt-3">- Bára Müllerová</p>
-                        </div>
-
-                        <div
-                            class="slides fade tw-text-justify tw-text-lg max-md:tw-text-base"
-                        >
-                            <q class="tw-italic tw-text-gray-600">
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Dolore sapiente possimus
-                                quibusdam nesciunt, architecto distinctio.
-                            </q>
-                            <div class="tw-mt-2 tw-text-yellow-400">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="tw-mt-3">- Matt freeman</p>
-                        </div>
-                    </div>
-
-                   
-                    <div class="dots-container tw-mt-auto">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                </div>
-            </div> -->
 
             <div
                 class="tw-mt-[5%] tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-5"
@@ -516,7 +425,7 @@
         </section>
 
         <div
-            class="tw-fixed tw-left-[50%] tw-top-[50%] tw-z-40 tw-flex tw-hidden tw-max-h-[450px] tw-w-[450px] tw-translate-x-[-50%] tw-translate-y-[-50%] tw-flex-col tw-rounded-md tw-bg-white tw-p-3 tw-shadow-2xl max-md:tw-w-[350px]"
+            class="tw-fixed tw-left-[50%] tw-top-[50%] tw-z-40 tw-hidden tw-max-h-[450px] tw-w-[450px] tw-translate-x-[-50%] tw-translate-y-[-50%] tw-flex-col tw-rounded-md tw-bg-white tw-p-3 tw-shadow-2xl max-md:tw-w-[350px]"
             id="modal"
         >
             <div class="tw-relative tw-h-[40px] tw-w-full">
@@ -554,12 +463,11 @@
         </div>
 
         <footer class="tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-bg-primary tw-p-[5%] tw-px-[10%] tw-text-white max-md:tw-flex-col">
-            <!-- Primera columna (imagen) -->
+            
             <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full">
                 <img src="./assets/sol-logo.png" alt="logo" class="tw-max-w-[200px]" />
-            </div>
-        
-            <!-- Segunda columna (dirección y redes sociales) -->
+            </div>        
+            
             <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full">
                 <div>
                     Calle Mayor, 17
@@ -585,8 +493,7 @@
                     </a>
                 </div>
             </div>
-        
-            <!-- Tercera columna (Enlaces Legales) -->
+            
             <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
                 <h2 class="tw-text-xl max-md:tw-text-lg">Enlaces Legales</h2>
                 <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
@@ -595,8 +502,7 @@
                     <a href="#">Política de Cookies</a>
                 </div>
             </div>
-        </footer>
-        
+        </footer>        
     </body>
 
     <script
